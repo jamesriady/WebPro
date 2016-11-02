@@ -6,6 +6,7 @@
 <body>
 	<?php
             session_start();
+            session_destroy();
 		require_once "database.php";
 		$conn = connection();
 		if(!isset($_SESSION["username"]))

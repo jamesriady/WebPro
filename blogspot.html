@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<?php
-session_start();
-    if(! isset($_SESSION['username'])) {
-        die('Anda belum login');
-    }
-?>
+
 <html>
     <head>
         <title>Blog Newbie</title>
@@ -105,38 +100,7 @@ session_start();
         <div class="wrapper">
         <img src="css/blog.png" class="logo">  
         </div>
-        <div class="navi">
-            <ul>
-                <li><a href="body.php">Blog</a></li>
-                <li><a href="profile.php">Profil</a></li>
-                <li><a href="">About</a></li>
-            </ul>
-        </div>
-        <div class="body">
-            <form method="POST" action="blog.php">
-                <div class="judul">
-                    <label>Judul:</label>
-                    <input type="text" name="judul">
-                </div>
-                <div class="genre">
-                    <label>Genre:</label>
-                    <select name="genre">
-                        <option value="-genre-">-Genre-</option>
-                        <option value="Horror">Horror</option>
-                        <option value="Comedy">Comedy</option>
-                        <option value="Love">Love</option>
-                        <option value="Action">Action</option>
-                        <option value="Live">Live</option>
-                    </select>
-                </div>
-                <div class="story">
-                    <label>Story:</label>
-                    <textarea name="story"></textarea>
-                </div>
-                <div class="btn">
-                    <input type="submit" value="add">
-                </div>
-            </form>
-        </div>
+        
+        
     </body>
 </html>

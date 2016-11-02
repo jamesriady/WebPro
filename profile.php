@@ -38,39 +38,40 @@
         </div>
         <div class="navi">
             <ul>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Profil</a></li>
+                <li><a href="body.php">Blog</a></li>
+                <li><a href="profile.php">Profil</a></li>
                 <li><a href="">About</a></li>
             </ul>
         </div>
         
 	
 	<form method="post" action="edit.php?username=<?php echo $data->username; ?>" enctype="multipart/form-data">
-		<div>
+            <div class="username">
 			<label>Username:</label>
 			<span><?php echo $data->username; ?></span>
 		</div>
-		<div>
+            <div class="password">
 			<label>Password:</label>
 			<input type="password" name="password" value="<?php echo $data->password; ?>">
 		</div>
-		<div>
+            <div class="email">
 			<label>Email:</label>
 			<input type="text" name="email" value="<?php echo $data->email; ?>">
 		</div>
-                <div>
+            <div class="gender">
 			<label>Gender:</label>
 			<span><?php echo $data->gender; ?></span>
 		</div>
-                <div>
+            <div class="tanggal">
 			<label>Tanggal lahir:</label>
 			<span><?php echo $data->tanggallahir; ?></span>
 		</div>
 		
-            <div><input type="submit" value="Update"></div>
-            
+            <div class="tombol"><input type="submit" value="Update" class="submit"></div>
+             
 	</form>
-        <div><a href="delete.php"><button>Delete Account</button></a></div>  
+        <div class="tombol"><a href="delete.php"><button>Delete Account</button></a></div> 
+        <div class="tombol"><a href="Logout.php"><button>Logout</button></a></div>
 
 </body>
 </html>
