@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Register</h1>
+
+		<form method="post" action="register.php">
+			<div>
+				<label>Username:</label>
+				<input type="text" name="username" class="text">
+			</div>
+			<div>
+				<label>Password:</label>
+				<input type="password" name="password" class="text">
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="text" name="email" placeholder="example@yahoo.com" class="text">
+			</div>
+			<div>
+				<label>Gender:</label>
+				<input type="radio" name="gender" value="Pria" class="radio">Pria
+				<input type="radio" name="gender" value="Wanita" class="radio">Wanita
+			</div>
+			<div>
+				<label>Tanggal lahir:</label>
+				<input type="date" name="tanggallahir" class="tanggal">
+			</div>
+			<div>
+				<input type="submit" value="Register" class="register">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

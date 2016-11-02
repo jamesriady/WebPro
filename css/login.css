@@ -1,0 +1,8 @@
+body {margin: 0 auto; width: 100%; background: url("background.jpg"); background-repeat: no-repeat; background-size: cover;}
+.wrapper {width: 200px; margin: 0 auto; margin-top: 250px; font-size: 40px;}
+.input {width: 250px; height: 40px; font-size: 30px;}
+.login {width: 80px; height: 40px; margin-left: 170px; margin-top: 20px;}
+.login:hover {background: orange; color: white;}
+.register {font-size: 15px; margin-top: 10px;}
+.register a {text-decoration: none; color: #000;}
+.register a:hover {color: #fff;}
