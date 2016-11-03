@@ -18,10 +18,10 @@
    		if($result)
 			echo "<p>Data teregister</p>";
 		else
-			die("Data tidak lengkap");
+			die("Username sudah terpakai, silahkan gunakan username yang lain");
 	}
 	else {
-		echo "<pre>Error menyimpan data</pre>";
+		echo "<pre>Data tidak lengkap</pre>";
 	}
 ?>
 <!DOCTYPE html>

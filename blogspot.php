@@ -94,13 +94,55 @@
                             margin : 20px 0px 0 0px;
                             
                         }
+                        .blogspot{
+                            width: 1000px;
+                            margin: 0 auto;
+                            margin-top: 50px;
+                        }
+                        h1{
+                            margin-top: -5px;
+                            text-transform: capitalize;
+                        }
+                        h2{
+                            margin-top: -20px;
+                            text-transform: capitalize;
+                        }
+                        h1, h2, p{
+                            text-indent: 0.2em;
+                            letter-spacing: 1.5px;;
+                        }
+                        .border{
+                            border: 1px solid;
+                            background: #FFFFFF;
+                            color: #f4b642;
+                        }
         </style>
     </head>
     <body>
         <div class="wrapper">
         <img src="css/blog.png" class="logo">  
         </div>
-        
+        <div class="blogspot">
+        <?php
+            require_once "database.php";
+            $conn = connection();
+            $query = $conn->prepare("select * from blog");
+            $result = $query->execute();
+            
+            if(!$result)
+                die("gagal query");
+                
+            $rows = $query->get_result();
+            while($row = $rows->fetch_array()) {
+                echo "<div class='border'>";
+                echo "<h1>" . $row['judul'] . "</h1>";
+                echo "<h2>Genre: " . $row['genre']. "</h2>";
+                echo "<p>" . $row['story'] . "</p>";
+                echo "</div>";
+                echo "<br>";
+            }
+        ?>
+        </div>
         
     </body>
 </html>
