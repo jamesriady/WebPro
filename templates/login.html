@@ -4,6 +4,7 @@
 	<head>
 		<title>login</title>
 		<link rel="stylesheet" href="css/login.css">
+                
 	</head>
 	<body>
 	<form method="POST" action="login.php" enctype="multipart/form-data">
@@ -20,9 +21,14 @@
 				<input type="submit" name="submit" value="Login" class="login">
 			</div>
 			<div class="register">
-				<a href="register.html">Register</a>/<a href="">Forgot Password?</a>
+				<a href="register.php">Register</a>/<a href="">Forgot Password?</a>
 			</div>
-		</div>
+                    <div class="error">
+                    {% block body %}{% endblock %}
+                    </div>
+                </div>
+
+		
 	</form>
 	</body>
 </html>

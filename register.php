@@ -1,7 +1,10 @@
  <?php
 	require_once "database.php";
-
-	if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['gender']) && isset($_POST['tanggallahir'])) {
+        require_once "twig.php";
+        if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['email']) && !isset($_POST['gender']) && !isset($_POST['tanggallahir'])) {
+            echo $twig->render("register.html");
+        }
+	else if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['gender']) && isset($_POST['tanggallahir'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$password_encrypt = md5($password);
@@ -16,20 +19,20 @@
 		$result = $query->execute();
 
    		if($result)
-			echo "<p>Data teregister</p>";
+			echo $twig->render("berhasilRegister.html");
 		else
-			die("Username sudah terpakai, silahkan gunakan username yang lain");
+			echo $twig->render("userSudahAda.html");
 	}
 	else {
-		echo "<pre>Data tidak lengkap</pre>";
+		echo $twig->render("dataTidakLengkap.html");
 	}
 ?>
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-	<p>Untuk kembali ke menu login, klik <a href="login.html">disini</a></p>
+	<p>Untuk kembali ke menu login, klik <a href="templates/login.html">disini</a></p>
 </body>
-</html>
+</html>-->

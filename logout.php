@@ -7,7 +7,7 @@
 <html>
     <head></head>
     <body>
-        <p>Untuk logout, klik <a href="login.html">disini</a></p>
+        <p>Untuk logout, klik <a href="login.php">disini</a></p>
     </body>
 </html>
     

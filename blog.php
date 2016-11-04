@@ -1,8 +1,9 @@
  <?php
     session_start();
 	require_once "database.php";
+        require_once "twig.php";
         if(!isset($_SESSION['username']))
-            die("Anda belum login");
+            echo $twig->render("login.html");
         
 	if(isset($_POST['judul']) && isset($_POST['genre']) && isset($_POST['story'])) {
 		$judul = $_POST['judul'];
@@ -16,20 +17,9 @@
 		$result = $query->execute();
 
    		if($result)
-			echo "<p>Berhasil ditambahkan</p>";
+			echo $twig->render("addBlog.html");
 		else
-			die("Error");
+			echo $twig->render("blogTidakLengkap.html");
 	}
-	else {
-		echo "<pre>Ada yang belum terisi</pre>";
-	}
+	
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<p>Kembali ke halaman utama, klik <a href="body.php">disini</a></p>
-</body>
-</html>
