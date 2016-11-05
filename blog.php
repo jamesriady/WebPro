@@ -3,7 +3,7 @@
 	require_once "database.php";
         require_once "twig.php";
         if(!isset($_SESSION['username']))
-            echo $twig->render("login.html");
+            echo $twig->render("pesan.html", array("pesan"=>"Anda belum login"));
         
 	if(isset($_POST['judul']) && isset($_POST['genre']) && isset($_POST['story'])) {
 		$judul = $_POST['judul'];
@@ -17,9 +17,9 @@
 		$result = $query->execute();
 
    		if($result)
-			echo $twig->render("addBlog.html");
+			echo $twig->render("pesanUpdate.html", array("pesan"=>"Blog berhasil di upload"));
 		else
-			echo $twig->render("blogTidakLengkap.html");
+			echo $twig->render("pesanUpdate.html", array("pesan"=>"Harap isi dengan lengkap"));
 	}
 	
 ?>

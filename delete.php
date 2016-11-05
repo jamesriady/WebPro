@@ -1,38 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+
 	<?php
             session_start();
             session_destroy();
 		require_once "database.php";
-		$conn = connection();
+		require_once 'twig.php';
+                $conn = connection();
 		if(!isset($_SESSION["username"]))
-			die("anda belum login");
+                    echo $twig->render("pesan.html", array("pesan"=>"Anda belum login"));
 
 		
 		$query = $conn->prepare("select * from register where username=?");
 		$query->bind_param("s", $_SESSION['username']);
 		$result = $query->execute();
 
-		if(! $result)
-			die("Gagal query");
-
-		$rows = $query->get_result();
-		if($rows->num_rows == 0)
-			die("data tidak ditemukan");
+		if($result)
+                    $rows = $query->get_result();
 
 		
 		$query = $conn->prepare("delete from register where username=?");
 		$query->bind_param("s", $_SESSION['username']);
 		$result = $query->execute();
 		if($result)
-			echo "<p>User telah dihapus</p>";
+			echo $twig->render("pesan.html", array("pesan"=>"User telah dihapus"));
 		else
-			echo "<p>Gagal menghapus</p>"
+			echo $twig->render("pesanRegister.html", array("pesan"=>"Gagal menghapus user"));
 	?>
-	<p><a href="login.html">Kembali</a></p>
-</body>
-</html>

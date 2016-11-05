@@ -6,6 +6,7 @@ session_start();
 			require_once "database.php";
                         require_once "twig.php";
 			$conn = connection();
+                       
                         if(!isset($_SESSION['username']) && !isset($_POST['username']) && !isset($_POST['password'])){
                             echo $twig->render("login.html");
                         }
@@ -27,7 +28,7 @@ session_start();
 					echo $twig->render("body.html");
 				}
 				else{
-					echo $twig->render("error.html");
+					echo $twig->render("pesan.html", array("pesan"=>"Username/password salah"));
 				}
 			}
 ?>

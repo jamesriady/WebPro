@@ -1,0 +1,30 @@
+{%extends "body.html"%}
+        {%block style%}<link rel="stylesheet" href="css/profile.css">{%endblock%}
+        {%block body%}
+	<form method="post" action="edit.php?username={{data['username']}}" enctype="multipart/form-data">
+            <div class="username">
+			<label>Username:</label>
+                        <span>{{data['username']}}</span>
+		</div>
+            <div class="password">
+			<label>Password:</label>
+			<input type="password" name="password" value="">
+		</div>
+            <div class="email">
+			<label>Email:</label>
+			<input type="text" name="email" value="{{data['email']}}">
+		</div>
+            <div class="gender">
+			<label>Gender:</label>
+                        <span>{{data['gender']}}</span>
+		</div>
+            <div class="tanggal">
+			<label>Tanggal lahir:</label>
+                        <span>{{data['tanggallahir']}}</span>
+		</div>
+            <div class="tombol"><input type="submit" value="Update" class="submit"></div>    
+	</form>
+        <div class="tombol"><a href="delete.php"><button>Delete Account</button></a></div> 
+        <div class="tombol"><a href="Logout.php"><button>Logout</button></a></div>
+        {%endblock%}
+

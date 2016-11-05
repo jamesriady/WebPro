@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+
 	<?php
             session_start();
 		require_once "database.php";
-
+                require_once 'twig.php';
 		$conn = connection();
 
 		if(! isset($_SESSION['username'])) {
-                    die('Anda belum login');
+                    echo $twig->render("pesan.html", array("pesan"=>"Anda belum login"));
                  }
                 
                 if(isset($_POST['password']) && isset($_POST['email'])) {
@@ -23,10 +18,7 @@
 		$result = $query->execute();
 
 		if($result)
-			echo "<p>Data berhasil diupdate</p>";
+			echo $twig->render("pesanUpdate.html", array("pesan"=>"Berhasil update"));
 		else
-			echo "<p>Gagal mengupdate data</p>";
+			echo $twig->render("pesanUpdate.html", array("pesan"=>"Gagal mengupdate data"));
 	?>
-    <p>Silahkan, <a href="profile.php">klik</a> untuk kembali ke profile</p>
-</body>
-</html>

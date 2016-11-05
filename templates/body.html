@@ -3,7 +3,7 @@
         <title>Blog Newbie</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/body.css">
+        {%block style%}<link rel="stylesheet" href="css/body.css">{%endblock%}
     </head>
     <body>
         <div class="wrapper">
@@ -16,6 +16,7 @@
                 <li><a href="">About</a></li>
             </ul>
         </div>
+        {%block body%}
         <div class="body">
             <form method="POST" action="blog.php">
                 <div class="judul">
@@ -44,6 +45,6 @@
                 {%block p%}{%endblock%}
                 </div>
             </form>
-        </div>
+        </div>{%endblock%}
     </body>
 </html>

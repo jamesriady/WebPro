@@ -19,20 +19,11 @@
 		$result = $query->execute();
 
    		if($result)
-			echo $twig->render("berhasilRegister.html");
+			echo $twig->render("pesan.html", array("pesan"=>"Data teregister"));
 		else
-			echo $twig->render("userSudahAda.html");
+			echo $twig->render("pesanRegister.html", array("pesan"=>"Username sudah terpakai"));
 	}
 	else {
-		echo $twig->render("dataTidakLengkap.html");
+		echo $twig->render("pesanRegister.html", array("pesan"=>"Data tidak lengkap"));
 	}
 ?>
-<!--<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<p>Untuk kembali ke menu login, klik <a href="templates/login.html">disini</a></p>
-</body>
-</html>-->

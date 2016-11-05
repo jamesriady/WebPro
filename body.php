@@ -10,7 +10,7 @@ $conn = connection();
        echo $twig->render("body.html");
     }
     else if(!isset($_SESSION['username'])) {
-        echo $twig->render("login.html");
+        echo $twig->render("pesan.html", array("pesan"=>"Anda belum login"));
     }
 ?>
 
