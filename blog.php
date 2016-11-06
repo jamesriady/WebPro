@@ -20,6 +20,8 @@
 			echo $twig->render("pesanUpdate.html", array("pesan"=>"Blog berhasil di upload"));
 		else
 			echo $twig->render("pesanUpdate.html", array("pesan"=>"Harap isi dengan lengkap"));
+                
+                
 	}
 	
 ?>

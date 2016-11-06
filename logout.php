@@ -1,13 +1,8 @@
 <?php
     session_start();
     session_destroy();
+    require_once 'twig.php';
+    
+    echo $twig->render("pesan.html");
     
 ?>
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <p>Untuk logout, klik <a href="login.php">disini</a></p>
-    </body>
-</html>
-    

@@ -9,6 +9,7 @@
         <div class="wrapper">
         <img src="css/blog.png" class="logo">  
         </div>
+        {%block body%}
         <div class="navi">
             <ul>
                 <li><a href="body.php">Blog</a></li>
@@ -16,7 +17,7 @@
                 <li><a href="">About</a></li>
             </ul>
         </div>
-        {%block body%}
+        {%block form%}
         <div class="body">
             <form method="POST" action="blog.php">
                 <div class="judul">
@@ -46,5 +47,6 @@
                 </div>
             </form>
         </div>{%endblock%}
+        {%endblock%}
     </body>
 </html>
