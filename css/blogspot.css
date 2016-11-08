@@ -42,4 +42,8 @@ body{
                             background: #FFFFFF;
                             color: #f4b642;
                             width: 1000px;
+                            margin-top:20px;
+                        }
+                        pre{
+                            margin-left: 400px;
                         }

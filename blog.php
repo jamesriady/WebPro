@@ -2,7 +2,7 @@
     session_start();
 	require_once "database.php";
         require_once "twig.php";
-        if(!isset($_SESSION['username']))
+        if(!isset($_SESSION['username'])) 
             echo $twig->render("pesan.html", array("pesan"=>"Anda belum login"));
         
 	if(isset($_POST['judul']) && isset($_POST['genre']) && isset($_POST['story'])) {
@@ -11,9 +11,8 @@
 		$story = $_POST['story'];
 
 		$conn = connection();
-
-		$query = $conn->prepare("insert into blog(judul, genre, story) values(?,?,?)");
-		$query->bind_param("sss", $judul, $genre, $story);
+		$query = $conn->prepare("insert into blog(username, judul, genre, story) values(?,?,?,?)");
+		$query->bind_param("ssss",$_SESSION['username'], $judul, $genre, $story);
 		$result = $query->execute();
 
    		if($result)

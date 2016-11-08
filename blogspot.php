@@ -18,7 +18,8 @@
             while($row = $rows->fetch_object()) {
                 $item = array("judul"   => $row->judul,
                                 "genre" => $row->genre,
-                                "story" => $row->story);
+                                "story" => $row->story,
+                                "username" => $row->username);
 
             array_push($array, $item);
             }
