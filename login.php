@@ -26,6 +26,7 @@ session_start();
 				if($rows->num_rows == 1) {
                                     $_SESSION['username'] = $username;
 					echo $twig->render("body.html");
+                                       
 				}
 				else{
 					echo $twig->render("pesan.html", array("pesan"=>"Username/password salah"));

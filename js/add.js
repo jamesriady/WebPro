@@ -1,3 +1,4 @@
+alert("Hello");
 function add(e) {
                         var cfm = confirm("Are you sure to Upload this story?");
                         if(!cfm)
