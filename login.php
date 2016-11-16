@@ -6,7 +6,7 @@ session_start();
 			require_once "database.php";
                         require_once "twig.php";
 			$conn = connection();
-                        $_SESSION['last_time'] = time();
+                       
                         if(!isset($_SESSION['username']) && !isset($_POST['username']) && !isset($_POST['password'])){
                             echo $twig->render("login.html");
                         }
