@@ -16,10 +16,15 @@
             $array = array();    
             
             while($row = $rows->fetch_object()) {
+                $image = "null.png";
+                if($row->image!=null)
+                    $image = $row->image;
+                
                 $item = array("judul"   => $row->judul,
                                 "genre" => $row->genre,
                                 "story" => $row->story,
-                                "username" => $row->username);
+                                "username" => $row->username,
+                                "image" => $image);
 
             array_push($array, $item);
             }

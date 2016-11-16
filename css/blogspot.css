@@ -47,3 +47,11 @@ body{
                         pre{
                             margin-left: 400px;
                         }
+                        .border img{
+                            width: 200px;
+                            height: 200px;
+                            text-align: center;
+                            border-radius: 100%;
+                            margin-left: 400px;
+                            margin-top: 5px;
+                        }

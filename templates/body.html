@@ -6,7 +6,7 @@
         {%block style%}<link rel="stylesheet" href="css/body.css">{%endblock%}
     </head>
     <body>
-        <script type="text/javascript" src="js/username.js"></script>
+<!--        <script type="text/javascript" src="js/auto.js"></script>-->
         <div class="wrapper">
         <img src="css/blog.png" class="logo">  
         </div>
@@ -20,7 +20,8 @@
         </div>
         {%block form%}
         <div class="body">
-            <form method="POST" action="blog.php">
+            <form method="POST" action="blog.php" enctype="multipart/form-data">
+                
                 <div class="judul">
                     <label>Judul:</label>
                     <input type="text" name="judul">
@@ -39,6 +40,9 @@
                 <div class="story">
                     <label>Story:</label>
                     <textarea name="story"></textarea>
+                </div>
+                <div>
+                    <input type="file" name="image" accept="image/*">
                 </div>
                 <div class="btn">
                     <input type="submit" value="add" onclick="return add();">

@@ -4,4 +4,5 @@ function logout() {
         return true;
     else
         return false;
+    
 }
