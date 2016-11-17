@@ -35,7 +35,8 @@
 				if(!$result_update)
 					die("Proses query gagal");
                                 
-                                echo "update berhasil";
+                                echo "<script>window.close</script>";
+                                
                             }
                         }else{
                             echo"password tidak cocok";

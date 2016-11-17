@@ -19,9 +19,10 @@
                         <span>{{data['tanggallahir']}}</span>
 		</div>
             <div class="change">
-                <a href='password.php'>Change Password</a> / <a href=''>Change Email</a>
+                <a href='password.php' onclick="changePassword(this);return false">Change Password</a> / <a href=''>Change Email</a>
+                <script type="text/javascript" src="js/password.js"></script>
             </div>
-<!--            <div class="tombol"><input type="submit" value="Update" class="submit"></div>    -->
+
 	</form>
         <div class="tombol"><a href="delete.php"><button>Delete Account</button></a></div>
         <div class="tombol"><a href="Logout.php"><button type="button" onclick="return logout();">Logout</button></a></div>
