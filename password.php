@@ -35,11 +35,11 @@
 				if(!$result_update)
 					die("Proses query gagal");
                                 
-                                echo "<script>window.close</script>";
-                                
+                                echo "<script>alert('Password berhasil di ganti')</script>";
+                                echo "<script>window.close();</script>";
                             }
                         }else{
-                            echo"password tidak cocok";
+                            echo "<script>alert('Password tidak cocok')</script>";
                         }
                         
                     }

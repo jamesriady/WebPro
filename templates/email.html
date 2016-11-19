@@ -1,0 +1,16 @@
+{%extends 'password.html'%}
+{%block style%}<link rel="stylesheet" href="css/email.css">{%endblock%}
+{%block form%}
+<form method="post" action="email.php?username={{data['username']}}">
+                <div>
+                            <label>Email:</label>
+                            <span>{{data['email']}}</span>
+                    </div>
+                <div>
+                            <label>New Email:</label>
+                            <input type="text" name="newemail">
+                    </div>
+
+                <div class="tombol"><input type="submit" name="submit" value="Save"></div>
+            </form>
+{%endblock%}

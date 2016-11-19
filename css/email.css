@@ -1,0 +1,30 @@
+body{
+                width: 100%;
+                margin: 0 auto;
+                background: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .wrapper{
+                margin: 0 auto;
+                width: 160px;
+            }
+            form{
+                  margin-top: 80px;
+            }
+            div{
+                margin-top:10px;
+            }
+            input{
+                height: 20px;
+                margin-top: 10px;
+            }
+            .tombol input{
+                width: 100px;
+                height:30px;
+                margin-left: 30px;
+            }
+            .tombol input:hover{
+                color:white;
+                background: #f4b642;
+            }
