@@ -66,3 +66,23 @@ body{
                             font-size: 20px;
                             margin: 0px 0px 0px 10px;
                         }
+                        ul{
+                            margin: 0 auto;
+                            width: 100px;
+                            margin-top: 30px;
+                        }
+                        ul > li{
+                            list-style-type: none;
+                            display: inline;
+                            font-size: 20px;
+                            margin-left: 10px;
+                        }
+                        
+                        ul > li > a{
+                            text-decoration: none;
+                            color: crimson;
+                        }
+                        
+                        ul > li > a:hover{
+                            color: #000;
+                        }

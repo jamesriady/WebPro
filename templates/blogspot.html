@@ -21,4 +21,13 @@
         </div>
         {%endfor%}
     </div>
+<ul>
+    {% for url in page_urls %}
+        {% if p == loop.index %}
+	<li>{{loop.index}}</li>
+	{% else %}
+	<li><a href="{{url}}">{{loop.index}}</a></li>
+	{% endif %}
+    {% endfor %}
+</ul>
 {%endblock%}
