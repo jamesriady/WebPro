@@ -6,7 +6,7 @@
         {%block style%}<link rel="stylesheet" href="css/body.css">{%endblock%}
     </head>
     <body>
-
+        {% block find %}{% endblock %}
         <div class="wrapper">
         <img src="css/blog.png" class="logo">  
         </div>
@@ -47,7 +47,9 @@
                 <div class="btn">
                     <input type="submit" value="add" onclick="return add();">
                 </div>
+                {% block script %}
                 <script type="text/javascript" src="js/add.js"></script>
+                {% endblock %}
                 <div id="text">
                 {%block p%}{%endblock%}
                 </div>

@@ -2,10 +2,14 @@
         <?php
             require_once "database.php";
             require_once 'twig.php';
-               
+            
+            $q = "%" . (isset($_GET['q']) ? $_GET['q'] : "") . "%";
+            
             $conn = connection();
-            $query = $conn->prepare("select * from blog");
+            $query = $conn->prepare("select * from blog where judul like ?");
+            $query->bind_param("s", $q);
             $result = $query->execute();
+            
             $error = false;
             $pesan = true;
             if(!$result){

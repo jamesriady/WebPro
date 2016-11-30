@@ -1,5 +1,14 @@
 {%extends "body.html"%}
 {%block style%}<link rel="stylesheet" href="css/blogspot.css">{%endblock%}
+{% block find %}
+<form method="get" action="blogspot.php">
+        <div>
+            <label>Cari: </label>
+            <input type="text" name="q">
+            <input type="submit" value="Enter">
+        </div>
+        </form>
+{% endblock %}
 {%block body%}
     <div class="blogspot">
         {%for item in items%}
